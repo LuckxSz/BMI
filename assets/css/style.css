@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1003%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(0%2c 0%2c 0%2c 1)'%3e%3c/rect%3e%3cpath d='M185.9 598.03C307.5 593.35 404.94 396.56 628.85 396.2 852.76 395.84 850.32 466.2 1071.8 466.2 1293.27 466.2 1402.64 396.42 1514.75 396.2' stroke='rgba(255%2c 255%2c 255%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M652.8 661.67C769.9 595.51 703.85 204.32 924.9 197.56 1145.96 190.8 1329.62 319.99 1469.11 320.76' stroke='rgba(255%2c 255%2c 255%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M758.76 561.12C877.31 485.36 807.02 72.79 1024.79 65.19 1242.56 57.59 1418.95 209.48 1556.85 210.79' stroke='rgba(255%2c 255%2c 255%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M604.83 589.94C750 569.71 807.93 244.33 1068.08 230.6 1328.22 216.87 1411.84 113.91 1531.32 113' stroke='rgba(255%2c 255%2c 255%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M536.32 632.79C656.19 599.6 612.95 267.28 871.97 265.55 1130.99 263.82 1372.64 388.24 1543.27 388.75' stroke='rgba(255%2c 255%2c 255%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1003'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
+}
+#container {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+#img img {
+  width: 32rem;
+}
+#calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#title {
+  font-size: 2.25rem;
+  position: relative;
+}
+#title::after {
+  position: absolute;
+  content: "";
+  background-color: rgb(0, 0, 0);
+  width: 8rem;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  border-radius: 3px;
+}
+.input-box label {
+  font-size: 1.1rem;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+.input-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(181, 181, 181, 0.29);
+  padding: 0.3rem;
+  border-radius: 3px;
+  margin-top: 3px;
+}
+.input-field span,
+.input-field i {
+  color: rgb(5, 5, 5);
+  font-size: 1.3rem;
+  padding: 0.3rem 1rem;
+}
+.input-field input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  font-size: 1.3rem;
+  color: rgb(6, 6, 6);
+  padding: 0 0.5rem;
+}
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button {
+  appearance: none;
+}
+.input-field input:focus {
+  outline: none;
+}
+#calculate {
+  border: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: rgb(10, 10, 10);
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#result {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  border-top: 1px solid rgb(5, 5, 5);
+  padding: 0.75rem 0;
+}
+#bmi {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2.25rem;
+}
+#bmi span:last-child {
+  font-size: 0.9rem;
+  color: rgb(0, 0, 0);
+}
+#description {
+  width: 15.5rem;
+}
+#more_info {
+  border-top: 1px solid rgb(0, 0, 0);
+  padding: 1.5rem;
+}
+#more_info a {
+  color: rgb(0, 82, 246);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9;
+  text-decoration: none;
+}
+#more_info a:hover {
+  color: rgb(5, 0, 0);
+}
+.hidden {
+  display: none;
+}
+.normal {
+  color: rgb(0, 255, 0);
+}
+.attention {
+  color: red;
+}
+@media screen and (max-width: 1024px) {
+  #img {
+    display: none;
+  }
+}
+@media screen and (max-width: 500) {
+  #container {
+    width: 100%;
+    height: 100%;
+  }
+  #calculator {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    justify-content: center;
+  }
+}
